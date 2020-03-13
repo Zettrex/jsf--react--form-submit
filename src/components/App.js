@@ -10,6 +10,7 @@ import {
 import Container from "react-bootstrap/Container";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
+import Contact from "./Contact"
 
 function App() {
     return (
@@ -24,8 +25,11 @@ function App() {
                         <NavLink to="/" exact className="nav-link">
                             Home
                         </NavLink>
-                        <NavLink to="/aboutus" className="nav-link">
-                            About
+                        <NavLink to="/about" className="nav-link">
+                            About Us
+                        </NavLink>
+                        <NavLink to="contact" className="nav-link">
+                            Contact Us
                         </NavLink>
                     </Nav>
                 </Navbar.Collapse>
@@ -33,8 +37,9 @@ function App() {
 
             <Container>
                 <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/aboutus" component={AboutUs} />
+                    <Route path="/" exact component={Home}/>
+                    <Route path="/about" component={AboutUs}/>
+                    <Route path="/contact" componecnt={Contact}/>
                 </Switch>
             </Container>
         </Router>
